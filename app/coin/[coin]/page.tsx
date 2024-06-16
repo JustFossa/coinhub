@@ -7,6 +7,7 @@ import { useRouter, usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import DOMPurify from "dompurify";
+import "./style.css";
 
 type CoinT = {
 	name: string;
@@ -49,25 +50,13 @@ export default function CoinPage() {
 			});
 	}, []);
 
-	useEffect(() => {
-		if (coin) {
-			const container = document.getElementById("container");
-			const links = container?.getElementsByTagName("a");
-			if (links) {
-				for (let link of links) {
-					link.classList.add("text-green-400");
-				}
-			}
-		}
-	}, [coin]);
-
 	return (
 		coin && (
 			<section
 				id="home"
-				className="bg-gradient-to-t from-black/30 to-[#130749]/70 items-center h-screen justify-center flex flex-col  text-h1 font-bold"
+				className="bg-gradient-to-t from-black/30 to-[#130749]/70 items-center w-screen min-h-screen justify-center flex flex-col  text-h1 font-bold"
 			>
-				<div className="top-[10%] translate-y-[50%] sm:top-[7%] md:top-[8.5%] flex flex-row items-center absolute ">
+				<div className="sm:w-[80%] md:w-[70%] mt-[10%] ml-auto mr-auto absolute  sm:mt-[7%] md:mt-[8.5%] flex flex-col gap-5 lg:flex-row items-center  ">
 					<div className="flex flex-col items-center gap-3">
 						<Image
 							src={coin.image.large}
@@ -80,9 +69,9 @@ export default function CoinPage() {
 							Rank: #{coin.market_cap_rank}
 						</h2>
 					</div>
-					<div className="h-[300px] w-[2px] bg-white mx-5" />
-					<div className="flex flex-col items-center gap-3 w-[40vw]">
-						<div className="flex flex-row items-center justify-between w-full">
+					<div className="h-[2px] w-full lg:h-[300px] lg:w-[2px]   bg-white mx-5" />
+					<div className="flex flex-col items-center gap-5 lg:w-[40vw] w-[90%]">
+						<div className="flex flex-row items-center justify-around lg:justify-between w-full">
 							<h1 className="text-lg capitalize font-medium">
 								24h Change:{" "}
 								<span

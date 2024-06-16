@@ -1,0 +1,8 @@
+#container > p > a {
+	color: rgb(74 222 128);
+	cursor: pointer;
+	text-decoration: none;
+}
+#container > p > a:hover {
+	text-decoration: underline;
+}

@@ -3,6 +3,7 @@ import { useRouter } from "next/navigation";
 
 type Props = {
 	name: string;
+	id: string;
 	symbol: string;
 	current_price: number;
 	image: string;
@@ -20,8 +21,8 @@ export default function Coin(props: Props) {
 	const router = useRouter();
 	return (
 		<div
-			className="flex flex-col items-center gap-y-2 cursor-pointer"
-			onClick={() => router.push(`coin/${props.name.toLowerCase()}`)}
+			className="flex flex-col items-center gap-y-2 cursor-pointer sm:scale-75 md:scale-100"
+			onClick={() => router.push(`coin/${props.id.toLowerCase()}`)}
 		>
 			<Image src={props.image} alt={props.name} width={90} height={90} />
 			<div className="flex flex-row capitalize gap-2 items-center">

@@ -20,8 +20,7 @@ const config: Config = {
 				"secondary-bg": "#130749",
 			},
 			screens: {
-				sm: { max: "480px" },
-				md: { max: "750px" },
+				sm: "650px",
 			},
 		},
 	},

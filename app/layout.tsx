@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Noto_Sans_Georgian, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 
@@ -8,6 +8,8 @@ export const metadata: Metadata = {
 	description: "Cryptocurrency news and information",
 };
 
+const font = Space_Grotesk({ subsets: ["latin"], display: "swap" });
+
 export default function RootLayout({
 	children,
 }: Readonly<{
@@ -15,7 +17,7 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en">
-			<body>
+			<body className={font.className}>
 				<Navbar />
 				{children}
 			</body>

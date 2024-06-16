@@ -2,13 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@100..900&display=swap");
-
 :root {
 	--foreground-rgb: 0, 0, 0;
 	--background-start-rgb: 214, 219, 220;
 	--background-end-rgb: 255, 255, 255;
+}
+
+html {
+	scroll-behavior: smooth;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -29,18 +30,43 @@ body {
 		rgb(var(--background-start-rgb));
 }
 
+::-webkit-scrollbar {
+	width: 10px;
+}
+
+::-webkit-scrollbar-track {
+	background-color: white;
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: #ff00ea;
+	border-radius: 12px;
+}
+
 @layer utilities {
 	.text-balance {
 		text-wrap: balance;
 	}
 	.text-h1 {
-		font-size: 7rem;
+		font-size: 7.5rem;
 		line-height: 1.1;
-		font-family: "Space Grotesk", sans-serif;
 	}
-	.text-h2 {
-		font-family: "Noto Sans Georgian", sans-serif;
+	@media screen and (max-width: 1200px) {
+		.text-h1 {
+			font-size: 6.5rem;
+		}
 	}
+	@media screen and (max-width: 850px) {
+		.text-h1 {
+			font-size: 5.5rem;
+		}
+	}
+	@media screen and (max-width: 600px) {
+		.text-h1 {
+			font-size: 4.5rem;
+		}
+	}
+
 	.navbar-text-hover {
 		@apply bg-clip-text text-transparent bg-gradient-to-r from-[#2600fc] to-[#ff00ea];
 	}
