@@ -4,10 +4,12 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { TbBrandDiscord, TbBrandGithub } from "react-icons/tb";
 import { RxHamburgerMenu, RxCross2 } from "react-icons/rx";
+import { useRouter } from "next/navigation";
 
 export default function Navbar() {
 	const [sticky, setSticky] = useState<boolean>(false);
 	const [open, setOpen] = useState<boolean>(false);
+	const router = useRouter();
 
 	const handleScroll = () => {
 		if (window.scrollY > 150) {
@@ -84,7 +86,12 @@ export default function Navbar() {
 					</ul>
 					<div className="flex flex-row  gap-[1rem] sm:gap-[2rem]">
 						<TbBrandDiscord className="text-3xl cursor-pointer" />
-						<TbBrandGithub className="text-3xl cursor-pointer" />
+						<TbBrandGithub
+							onClick={() =>
+								router.replace("https://github.com/JustFossa/coinhub")
+							}
+							className="text-3xl cursor-pointer"
+						/>
 						<RxHamburgerMenu
 							className="text-3xl cursor-pointer md:hidden"
 							onClick={toggleMenu}
