@@ -40,7 +40,7 @@ export default function WhyUs() {
 						<IoCheckmarkDone className="text-5xl " />
 					)}
 				</div>
-				<Image className="" src={LockIcon} alt="Why Us" width={400} />
+				<Image className="max-w-screen" src={LockIcon} alt="Why Us" width={300} />
 				<div className="flex flex-col gap-5">
 					{WhyUsItem(
 						"RECEIVE YOUR OWN NFTS",
