@@ -100,8 +100,8 @@ export default function Navbar() {
 				</div>
 			</nav>
 			<div
-				className={`fixed w-full h-screen bg-white top-0 translate-x-[-100%] flex-col flex z-[999] transition-all duration-300 ease-out ${
-					open && "translate-x-0"
+				className={`fixed w-full h-screen bg-white top-0  flex-col flex z-[999] transition-all duration-300 ease-out select-none ${
+					open ? "translate-x-0" : "translate-x-[-100%]"
 				}`}
 			>
 				<RxCross2
