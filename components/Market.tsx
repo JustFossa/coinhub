@@ -48,7 +48,7 @@ export default function MarketTable() {
 	}, [page]);
 
 	return (
-		<section id="market" className="w-full p-10 md:p-20">
+		<section id="market" className="w-full p-10 md:p-20 select-none">
 			<div className="flex flex-col items-center ml-auto mr-auto max-w-[130rem] px-0 lg:px-20">
 				<div className="flex w-full">
 					<h1 className="font-bold text-3xl sm:text-5xl">Market Update</h1>

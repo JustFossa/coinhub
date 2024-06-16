@@ -42,7 +42,7 @@ export default function Navbar() {
 		<>
 			<nav
 				className={`${sticky ? "bg-black" : "bg-secondary-bg/5"} 
-			 w-screen  top-0 fixed   text-h2 px-[3rem] py-[2rem] flex items-center justify-center z-10`}
+			 w-screen  top-0 fixed   text-h2 px-[3rem] py-[2rem] flex items-center justify-center z-10 select-none`}
 			>
 				<div className="lg:w-[70%] md:w-[90%] w-full flex flex-row items-center justify-between">
 					<h2 onClick={goTop} className="text-3xl font-bold cursor-pointer">
@@ -85,7 +85,10 @@ export default function Navbar() {
 						</li>
 					</ul>
 					<div className="flex flex-row  gap-[1rem] sm:gap-[2rem]">
-						<TbBrandDiscord className="text-3xl cursor-pointer" />
+						<TbBrandDiscord
+							className="text-3xl cursor-pointer"
+							onClick={() => router.replace("https://discord.gg")}
+						/>
 						<TbBrandGithub
 							onClick={() =>
 								router.replace("https://github.com/JustFossa/coinhub")

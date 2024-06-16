@@ -43,7 +43,7 @@ export default function Header() {
 	return (
 		<section
 			id="home"
-			className="bg-gradient-to-t from-black/30 h-screen to-[#130749]/70 items-center justify-center flex flex-col text-white font-bold"
+			className="bg-gradient-to-t from-black/30 h-screen to-[#130749]/70 items-center justify-center flex flex-col text-white font-bold select-none"
 		>
 			<div className="flex flex-col items-center absolute lg:top-[10%] translate-y-[50%] top-0 ">
 				<h1 className="uppercase text-center select-none text-h1 ">

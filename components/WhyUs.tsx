@@ -14,7 +14,7 @@ export default function WhyUs() {
 	return (
 		<section
 			id="choose-us"
-			className="w-full flex flex-col items-center h-full justify-center"
+			className="w-full flex flex-col items-center h-full justify-center select-none"
 		>
 			<h1 className="text-[3em] sm:text-[5em] text-3xl font-bold text-white uppercase ">
 				Why{" "}
