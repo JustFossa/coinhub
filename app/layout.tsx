@@ -22,7 +22,7 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en">
-			<body className={font.className + " w-full"}>
+			<body className={font.className + " w-screen"}>
 				<Navbar />
 				{children}
 			</body>
