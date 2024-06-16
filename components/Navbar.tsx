@@ -42,7 +42,7 @@ export default function Navbar() {
 		<>
 			<nav
 				className={`${sticky ? "bg-black" : "bg-secondary-bg/5"} 
-			 w-screen  top-0 fixed   text-h2 px-[3rem] py-[2rem] flex items-center justify-center z-10 select-none`}
+			 w-full top-0 fixed   text-h2 px-[3rem] py-[2rem] flex items-center justify-center z-10 select-none`}
 			>
 				<div className="lg:w-[70%] md:w-[90%] w-full flex flex-row items-center justify-between">
 					<h2 onClick={goTop} className="text-3xl font-bold cursor-pointer">
