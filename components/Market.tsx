@@ -117,7 +117,6 @@ export default function MarketTable() {
 								} cursor-pointer px-4 py-2 rounded-full`}
 								onClick={() => {
 									setPage(num);
-									setLoading(true);
 								}}
 							>
 								{num}
