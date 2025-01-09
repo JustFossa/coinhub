@@ -56,8 +56,8 @@ export default function CoinPage() {
 				id="home"
 				className="bg-gradient-to-t from-black/30 to-[#130749]/70 items-center w-screen min-h-screen justify-center flex flex-col  text-h1 font-bold"
 			>
-				<div className="sm:w-[80%] md:w-[70%] mt-[10%] ml-auto mr-auto absolute  sm:mt-[7%] md:mt-[8.5%] flex flex-col gap-5 lg:flex-row items-center  ">
-					<div className="flex flex-col items-center gap-3">
+				<div className="sm:w-[80%] md:w-[70%] ml-auto mr-auto absolute top-[5%] mt-[10%]  sm:mt-[7%] md:mt-[8.5%] flex flex-col gap-5 lg:flex-row items-center  ">
+					<div className="flex flex-col items-center gap-3 w-[32vw] sm:w-[100%]">
 						<Image
 							src={coin.image.large}
 							alt={coin.name}
